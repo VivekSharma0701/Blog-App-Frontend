@@ -1,0 +1,99 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .card h1 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .card small {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .card label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .card input,
+  .card p-password {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(100% - 22px); /* To account for padding and border */
+    box-sizing: border-box;
+  }
+  
+  .card input:focus,
+  .card p-password:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .card p-button {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card p-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .card .underline {
+    text-decoration: underline;
+    color: #007bff;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .card .underline:hover {
+    color: #0056b3;
+  }
+  
+  .text-red-500 {
+    color: #ff0000;
+  }
+  

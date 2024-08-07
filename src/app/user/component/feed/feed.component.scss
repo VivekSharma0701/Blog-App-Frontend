@@ -1,0 +1,38 @@
+.page-container {
+    background-color: #cf4343; /* Choose your desired background color */
+    min-height: 100vh; /* Ensure it covers the full height of the page */
+    padding: 20px;
+  }
+
+.announcement-list {
+    height: 250px; /* Adjust height as needed */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .scrolling-list {
+    display: flex;
+    flex-direction: column;
+    animation: scroll 10s linear infinite;
+  }
+  
+  .scrolling-list li {
+    padding: 5px 0;
+  }
+  
+
+  .announcement{
+    width: 340px;
+    border: 1px solid rgb(236, 125, 125);
+    height: 350px;
+    padding: 8px;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  

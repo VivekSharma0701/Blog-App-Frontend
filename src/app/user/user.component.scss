@@ -1,0 +1,27 @@
+/* Add background color and padding to the entire component */
+.page-container {
+    background-color: #f58f8f; /* Light grey background */
+    padding: 20px; /* Optional: Add padding around the content */
+  }
+  
+  /* Style the PrimeNG button and dropdown */
+  .p-button {
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text */
+  }
+  
+  .p-dropdown {
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  /* Style the logout button */
+  .logout-button {
+    background-color: #ff4d4d; /* Red background */
+    color: #fff; /* White text */
+  }
+  
+  /* Style the login button */
+  .login-button {
+    background-color: #4dff4d; /* Green background */
+  }
+  

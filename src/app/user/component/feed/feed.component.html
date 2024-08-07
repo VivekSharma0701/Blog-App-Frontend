@@ -1,0 +1,27 @@
+<h2 class="mb-3 mt-5 text-center text-4xl">FEEDS</h2>
+
+<div class="double-container">
+  <div class="grid grid-nogutter" style="display: flex;justify-content: space-between;">
+    <div class="col-12 sm:col-12 md:col-6 lg:col-6 xl:col-4 p-2" *ngFor="let post of displayedPosts">
+      <!-- Post -->
+      <app-post
+        [post]="post"
+        [canEdit]="false"
+      ></app-post>
+    </div>
+    <div class="announcement" style="border: 1px solid black;">
+      <h4 style="background-color: black;color: white;">Announcements</h4>
+      <div class="announcement-list">
+        <ul class="scrolling-list">
+          <li *ngFor="let item of allAnnouncementData">
+            {{ item?.content }}
+          </li>
+        </ul>
+      </div>
+      </div>
+  </div>
+
+  </div>
+
+
+<p-paginator [rows]="rows" [totalRecords]="posts.length" [rowsPerPageOptions]="[2, 4, 8]" (onPageChange)="paginate($event)"></p-paginator>

@@ -1,0 +1,25 @@
+<!-- announcement.component.html -->
+<div class="announcement-section">
+  <button class="create-announcement-btn" (click)="toggleForm()">Create Announcement</button>
+
+  <div *ngIf="showForm" class="announcement-form">
+    <h3>{{ editingAnnouncement ? 'Edit Announcement' : 'Create New Announcement' }}</h3>
+    <form (ngSubmit)="createAnnouncement()">
+      <label for="title">Title:</label>
+      <input id="title" [(ngModel)]="newAnnouncement.title" name="title" required>
+
+      <label for="content">Content:</label>
+      <textarea id="content" [(ngModel)]="newAnnouncement.content" name="content" required></textarea>
+
+      <button type="submit">{{ editingAnnouncement ? 'Update' : 'Submit' }}</button>
+      <button type="button" (click)="toggleForm()">Cancel</button>
+    </form>
+  </div>
+
+  <div class="announcement" *ngFor="let announcement of announcements">
+    <h3>{{ announcement.title }}</h3>
+    <p>{{ announcement.content }}</p>
+    <button (click)="editAnnouncement(announcement)">Edit</button>
+    <button (click)="deleteAnnouncement(announcement.id)">Delete</button>
+  </div>
+</div>
